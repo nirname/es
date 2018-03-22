@@ -8,11 +8,7 @@ services:
       - 9200:9200
     volumes:
       - esdata:/usr/share/elasticsearch/data
-    # networks:
-    #   - esnet
 
-# networks:
-  # esnet:
 volumes:
   esdata:
     driver: local
