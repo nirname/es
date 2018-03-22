@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+  elasticsearch:
+    build: .
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    # networks:
+    #   - esnet
+
+# networks:
+  # esnet:
+volumes:
+  esdata:
+    driver: local

@@ -1,0 +1,6 @@
+# path:
+#   logs: /var/log/elasticsearch
+#   data: /var/data/elasticsearch
+
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
