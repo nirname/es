@@ -1,7 +1,6 @@
 version: '2.2'
 services:
   elasticsearch:
-    # build: .
     image: elasticsearch:2.4.3
     container_name: elasticsearch
     ports:

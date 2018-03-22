@@ -1,6 +1,4 @@
-default: cluster
-
-refresh: stop clean
+default: node
 
 node:
 	docker-compose -f es-node.yml up
@@ -17,7 +15,7 @@ check:
 
 .PHONY: clean
 
-clean:
+clean: stop
 	docker images elasticsearch -q | xargs -I{} docker rmi -f {}
 	docker images docker.elastic.co/elasticsearch/elasticsearch -q | xargs -I{} docker rmi -f {}
 	docker images -f dangling=true -q | xargs -I{} docker rmi -f {}
